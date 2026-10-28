@@ -12,10 +12,10 @@ const whyPartner = [
 
 // card colour treatments, cycled; the last card is styled separately
 const tones = [
-  { card: "bg-brand-mint", pill: "bg-white text-brand-green" },
-  { card: "bg-amber-100", pill: "bg-white text-amber-700" },
-  { card: "bg-orange-100", pill: "bg-white text-brand-orange" },
-  { card: "bg-neutral-100", pill: "bg-white text-neutral-700" },
+  { card: "glass", pill: "glass-pill text-brand-green" },
+  { card: "glass-warm", pill: "glass-pill text-amber-700" },
+  { card: "glass-warm", pill: "glass-pill text-brand-orange" },
+  { card: "glass", pill: "glass-pill text-neutral-700" },
 ];
 
 function Arrow() {
@@ -28,7 +28,7 @@ function Arrow() {
 
 export default function WhyPartnerSection() {
   return (
-    <section id="why-partner" className="scroll-mt-16 bg-white relative overflow-hidden">
+    <section id="why-partner" className="scroll-mt-16 relative overflow-hidden">
       <WheatDecor items={[{ side:"right", top:"28%", size:120, rotate:15 }, { side:"left", top:"70%", size:80, rotate:-30 }]} />
       <div className="relative mx-auto grid max-w-[1920px] gap-12 px-6 py-24 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:px-20">
         {/* intro */}
@@ -37,7 +37,7 @@ export default function WhyPartnerSection() {
           <h2 className="mt-3 text-4xl font-bold leading-tight text-brand-green sm:text-5xl">
             Seven reasons to partner with IIRS 2027
           </h2>
-          <div className="mt-5 h-1 w-16 rounded bg-brand-orange" />
+          <div className="mt-5 h-1 w-16 rounded-full bg-brand-orange" />
           <p className="mt-6 text-lg leading-relaxed text-neutral-700">
             Partner with IIRS 2027 to connect with key decision-makers across the rice value chain, strengthen your
             brand presence and explore new business opportunities. Contribute to a shared agenda for innovation,
@@ -45,10 +45,10 @@ export default function WhyPartnerSection() {
           </p>
           <a
             href="#contact"
-            className="mt-8 inline-flex items-center gap-3 rounded-full bg-brand-orange py-2 pl-7 pr-2 font-semibold text-white transition hover:brightness-110"
+            className="mt-8 btn-glass inline-flex items-center gap-3 rounded-full py-2 pl-7 pr-2 font-semibold text-white transition hover:brightness-110"
           >
             Become a Partner
-            <span className="grid h-10 w-10 place-items-center rounded-full bg-white text-brand-orange">
+            <span className="grid h-10 w-10 place-items-center rounded-full bg-white/80 text-brand-orange">
               <Arrow />
             </span>
           </a>
@@ -62,8 +62,8 @@ export default function WhyPartnerSection() {
             return (
               <article
                 key={title}
-                className={`group flex flex-col rounded-2xl p-7 transition hover:-translate-y-1 hover:shadow-lg ${
-                  last ? "bg-brand-green text-white sm:col-span-2" : `${t.card} text-neutral-900`
+                className={`group flex flex-col rounded-3xl p-7 transition hover:-translate-y-1 hover:shadow-lg ${
+                  last ? "glass-green text-white sm:col-span-2" : `${t.card} text-neutral-900`
                 }`}
               >
                 <div className="flex items-center justify-between">

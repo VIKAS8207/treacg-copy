@@ -22,13 +22,13 @@ export default function HeroSection() {
         <div className="mt-2 flex flex-wrap justify-center gap-4">
           <Link
             href="/register/form"
-            className="rounded-sm bg-brand-orange px-8 py-3 text-lg font-semibold transition hover:brightness-110"
+            className="btn-glass rounded-full px-8 py-3 text-lg font-semibold transition hover:brightness-110"
           >
             Register Now
           </Link>
           <a
             href="#tickets"
-            className="rounded-sm border-2 border-white px-8 py-3 text-lg font-semibold transition hover:bg-white hover:text-brand-green"
+            className="btn-outline-light rounded-full px-8 py-3 text-lg font-semibold transition hover:bg-white hover:text-brand-green"
           >
             View Ticket Plans
           </a>

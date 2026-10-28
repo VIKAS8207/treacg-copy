@@ -13,19 +13,19 @@ export default function RegisterFormPage() {
   return (
     <>
       <Header />
-      <main className="flex-1 bg-white">
+      <main className="flex-1">
         <div className="mx-auto max-w-4xl px-6 py-20">
           <SectionHeading eyebrow="IIRS 2027 · 20–21 January 2027" title="Register for IIRS 2027" />
 
-          <div className="rounded-2xl bg-orange-100/70 p-3 sm:p-6">
+          <div className="glass-warm rounded-3xl p-3 sm:p-6">
             {IIRS_FORM_URL ? (
               <iframe
                 src={IIRS_FORM_URL}
                 title="IIRS 2027 registration form"
-                className="h-[900px] w-full rounded-xl bg-white"
+                className="h-[900px] w-full glass-strong rounded-2xl"
               />
             ) : (
-              <div className="grid h-[480px] place-items-center rounded-xl bg-white px-6 text-center">
+              <div className="grid h-[480px] place-items-center glass-strong rounded-2xl px-6 text-center">
                 <div>
                   <p className="text-xl font-bold text-brand-green">IIRS registration form</p>
                   <p className="mt-2 text-neutral-600">The registration form will appear here.</p>

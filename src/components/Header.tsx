@@ -49,7 +49,7 @@ export default function Header() {
   return (
     <header>
       {/* partner logos + CTAs */}
-      <div className="bg-brand-mint">
+      <div className="glass-bar">
         <div className="mx-auto flex max-w-[1920px] flex-wrap items-center justify-between gap-4 px-6 py-4 lg:px-20">
           <div className="flex flex-wrap items-center gap-x-10 gap-y-2">
             {partners.map((p) => (
@@ -61,13 +61,13 @@ export default function Header() {
           <div className="flex gap-4">
             <Link
               href="/iirs-2027"
-              className="rounded-sm border-2 border-brand-orange bg-brand-orange px-8 py-3 font-semibold text-white transition hover:brightness-110"
+              className="btn-glass rounded-full px-8 py-3 font-semibold text-white transition hover:brightness-110"
             >
               IIRS 2027
             </Link>
             <Link
               href="/register"
-              className="rounded-sm border-2 border-brand-orange px-8 py-3 font-semibold text-brand-orange transition hover:bg-brand-orange hover:text-white"
+              className="btn-outline rounded-full px-8 py-3 font-semibold text-brand-orange transition hover:bg-brand-orange hover:text-white"
             >
               Register
             </Link>
@@ -76,7 +76,7 @@ export default function Header() {
       </div>
 
       {/* social strip */}
-      <div className="bg-brand-orange">
+      <div className="glass-orange-bar">
         <div className="mx-auto flex max-w-[1920px] items-center justify-end gap-5 px-6 py-2 text-white lg:px-20">
           <span className="font-semibold">Follow IIRS On:</span>
           {socials.map((s) => (
@@ -90,7 +90,7 @@ export default function Header() {
       </div>
 
       {/* main nav */}
-      <nav className="bg-brand-green text-white">
+      <nav className="glass-green-bar text-white">
         <div className="mx-auto flex max-w-[1920px] items-center justify-between gap-6 px-6 py-3 lg:px-20">
           <Link href="/" className="flex items-center gap-4">
             <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full border-2 border-amber-300/70 text-[10px] font-bold text-amber-200">
@@ -112,7 +112,7 @@ export default function Header() {
                   {item.children && <Chevron />}
                 </Link>
                 {item.children && (
-                  <ul className="invisible absolute left-0 top-full z-20 min-w-48 rounded-b bg-brand-green py-2 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100">
+                  <ul className="invisible absolute left-0 top-full z-20 min-w-48 rounded-b-2xl glass-green-bar py-2 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100">
                     {item.children.map((c) => (
                       <li key={c}>
                         <Link href="#" className="block px-5 py-2 text-sm hover:bg-white/10">
@@ -128,10 +128,10 @@ export default function Header() {
 
           {/* mobile */}
           <details className="relative lg:hidden">
-            <summary className="cursor-pointer list-none rounded border border-white/40 px-3 py-2 text-sm font-semibold">
+            <summary className="cursor-pointer list-none rounded-full border border-white/40 px-3 py-2 text-sm font-semibold">
               Menu
             </summary>
-            <ul className="absolute right-0 top-full z-20 mt-2 w-56 rounded bg-brand-green py-2 shadow-lg">
+            <ul className="absolute right-0 top-full z-20 mt-2 w-56 rounded-2xl glass-green-bar py-2 shadow-lg">
               {navItems.map((item) => (
                 <li key={item.label}>
                   <Link href={item.href} className="block px-5 py-2 text-sm font-semibold hover:bg-white/10">
@@ -145,8 +145,8 @@ export default function Header() {
       </nav>
 
       {/* notifications ticker */}
-      <div className="flex items-center overflow-hidden bg-brand-orange text-sm font-semibold text-white">
-        <span className="z-10 shrink-0 bg-brand-orange py-2 pr-6">Notifications:</span>
+      <div className="glass-orange-bar flex items-center overflow-hidden text-sm font-semibold text-white">
+        <span className="z-10 shrink-0 py-2 pl-6 pr-6">Notifications:</span>
         <p className="animate-marquee whitespace-nowrap py-2">
           Expo to be organised on 20-21 January 2027 in Raipur, Chhattisgarh, India
         </p>

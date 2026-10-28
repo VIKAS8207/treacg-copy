@@ -25,12 +25,12 @@ export default function HeroSection() {
         <p className="text-lg font-semibold text-amber-400">Think Rice, Think India</p>
         <EventPanel showIncluded />
         <div className="mt-2 flex flex-wrap justify-center gap-4">
-          <a href="#contact" className="rounded-sm bg-brand-orange px-8 py-3 text-lg font-semibold transition hover:brightness-110">
+          <a href="#contact" className="btn-glass rounded-full px-8 py-3 text-lg font-semibold transition hover:brightness-110">
             Become a Partner
           </a>
           <a
             href="#why-partner"
-            className="rounded-sm border-2 border-white px-8 py-3 text-lg font-semibold transition hover:bg-white hover:text-brand-green"
+            className="btn-outline-light rounded-full px-8 py-3 text-lg font-semibold transition hover:bg-white hover:text-brand-green"
           >
             Why Partner?
           </a>

@@ -10,7 +10,7 @@ const activities: { title: string; text: string; images?: string[]; card: string
     title: "Grand Inauguration",
     images: ["/images/glimpse/inauguration-1.svg", "/images/glimpse/inauguration-2.svg", "/images/glimpse/inauguration-3.svg"],
     text: "Inaugurated by the Hon'ble Chief Minister and the Hon'ble Finance Minister of Chhattisgarh, setting a powerful national tone.",
-    card: "bg-brand-orange text-white",
+    card: "glass-orange text-white",
     muted: "text-white/85",
     pill: "bg-white/25 text-white",
     ph: "from-orange-300 to-orange-600",
@@ -19,25 +19,25 @@ const activities: { title: string; text: string; images?: string[]; card: string
     title: "Leadership Roundtable",
     images: ["/images/glimpse/roundtable-1.svg", "/images/glimpse/roundtable-2.svg", "/images/glimpse/roundtable-3.svg"],
     text: "High-level discussions with industry leaders and MNCs across the global rice value chain.",
-    card: "bg-brand-mint text-neutral-900",
+    card: "glass text-neutral-900",
     muted: "text-neutral-600",
-    pill: "bg-white text-brand-green",
+    pill: "glass-pill text-brand-green",
     ph: "from-emerald-200 to-emerald-500",
   },
   {
     title: "Expert Panels",
     images: ["/images/glimpse/panels-1.svg", "/images/glimpse/panels-2.svg", "/images/glimpse/panels-3.svg"],
     text: "Renowned experts shared insights on trends, technology, exports and future opportunities.",
-    card: "bg-amber-100 text-neutral-900",
+    card: "glass-warm text-neutral-900",
     muted: "text-neutral-600",
-    pill: "bg-white text-amber-700",
+    pill: "glass-pill text-amber-700",
     ph: "from-amber-200 to-amber-500",
   },
   {
     title: "Music Night & Gala Dinner",
     images: ["/images/glimpse/gala-1.svg", "/images/glimpse/gala-2.svg", "/images/glimpse/gala-3.svg"],
     text: "A vibrant music night and elegant gala dinner fostering meaningful networking.",
-    card: "bg-brand-green text-white",
+    card: "glass-green text-white",
     muted: "text-white/80",
     pill: "bg-white/20 text-white",
     ph: "from-green-600 to-green-900",
@@ -46,13 +46,13 @@ const activities: { title: string; text: string; images?: string[]; card: string
 
 export default function GlimpseSection() {
   return (
-    <section id="glimpse" className="scroll-mt-16 bg-white relative overflow-hidden">
+    <section id="glimpse" className="scroll-mt-16 relative overflow-hidden">
       <WheatDecor items={[{ side:"left", top:"30%", size:96, rotate:-20 }, { side:"right", top:"68%", size:140, rotate:25 }]} />
       <div className="relative mx-auto max-w-[1920px] px-6 py-20 lg:px-20">
         <SectionHeading eyebrow="Last edition" title="IIRS-2026 Glimpse & Activities" />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {activities.map((a, i) => (
-            <article key={a.title} className={`flex flex-col rounded-2xl p-3 ${a.card}`}>
+            <article key={a.title} className={`flex flex-col rounded-3xl p-3 ${a.card}`}>
               <div className="px-4 pb-5 pt-4">
                 <div className="flex gap-2 text-xs font-semibold">
                   <span className={`rounded-full px-3 py-1 ${a.pill}`}>0{i + 1}</span>

@@ -27,7 +27,7 @@ function PinIcon() {
 // frosted panel for heroes: date, venue, live countdown and (optionally) what's included
 export default function EventPanel({ showIncluded = false }: { showIncluded?: boolean }) {
   return (
-    <div className="w-full max-w-3xl overflow-hidden rounded-xl border border-white/20 bg-black/35 text-white backdrop-blur-md">
+    <div className="w-full max-w-3xl overflow-hidden rounded-3xl border border-white/20 bg-black/30 text-white backdrop-blur-md">
       <div className="grid divide-white/15 sm:grid-cols-2 sm:divide-x">
         <div className="flex items-center gap-4 px-6 py-5 text-left">
           <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-brand-orange">

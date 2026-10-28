@@ -17,11 +17,11 @@ export default function TicketPlans() {
   return (
     <div className="mx-auto grid max-w-4xl items-start gap-5 md:grid-cols-2">
       {plans.map((p) => (
-        <article key={p.name} className="flex flex-col rounded-2xl bg-brand-mint p-3">
+        <article key={p.name} className="flex flex-col glass rounded-3xl p-3">
           <div className="px-4 pb-4 pt-4">
             <div className="flex items-center justify-between">
-              <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-brand-green">All 2 days</span>
-              <span className="grid h-10 w-10 place-items-center rounded-full bg-white text-brand-green">
+              <span className="glass-pill rounded-full px-3 py-1 text-xs font-semibold text-brand-green">All 2 days</span>
+              <span className="grid h-10 w-10 place-items-center rounded-full bg-white/60 text-brand-green">
                 <TicketIcon />
               </span>
             </div>
@@ -37,7 +37,7 @@ export default function TicketPlans() {
               <span className="ml-2 text-sm font-normal text-neutral-500">/ delegate</span>
             </p>
 
-            <details className="group mt-6 rounded-xl bg-white">
+            <details className="group mt-6 glass-strong rounded-2xl">
               <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-neutral-800">
                 What&apos;s included
                 <svg
@@ -60,10 +60,10 @@ export default function TicketPlans() {
 
             <Link
               href={`/tickets/enquire?plan=${encodeURIComponent(p.name)}`}
-              className="mt-6 inline-flex items-center gap-3 rounded-full bg-brand-orange py-1.5 pl-6 pr-1.5 text-sm font-semibold text-white transition hover:brightness-110"
+              className="mt-6 btn-glass inline-flex items-center gap-3 rounded-full py-1.5 pl-6 pr-1.5 text-sm font-semibold text-white transition hover:brightness-110"
             >
-              Enquire Now
-              <span className="grid h-8 w-8 place-items-center rounded-full bg-white text-brand-orange">
+              Register Now
+              <span className="grid h-8 w-8 place-items-center rounded-full bg-white/80 text-brand-orange">
                 <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
                   <path d="M6 14 14 6M7 6h7v7" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

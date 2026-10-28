@@ -6,7 +6,7 @@ export const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 export const PHONE_RE = /^\+\d[\d\s-]{6,16}$/;
 
 export const inputCls =
-  "w-full rounded-sm border bg-white px-4 py-3 text-sm text-neutral-900 outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/30";
+  "w-full glass-input rounded-xl px-4 py-3 text-sm text-neutral-900 outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/30";
 
 export const border = (err?: string) => (err ? "border-red-500" : "border-neutral-300");
 
@@ -40,7 +40,7 @@ export function Field({
 export function Success({ message }: { message: string }) {
   return (
     <div className="py-6 text-center">
-      <div className="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-brand-mint text-brand-green">
+      <div className="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-white/60 text-brand-green">
         <svg viewBox="0 0 20 20" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
           <path d="m4 10.5 4 4 8-9" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
@@ -48,7 +48,7 @@ export function Success({ message }: { message: string }) {
       <p className="text-lg font-semibold text-brand-green">{message}</p>
       <Link
         href="/"
-        className="mt-6 inline-block rounded-sm bg-brand-orange px-8 py-3 font-semibold text-white transition hover:brightness-110"
+        className="mt-6 inline-block btn-glass rounded-full px-8 py-3 font-semibold text-white transition hover:brightness-110"
       >
         Back to Home
       </Link>
@@ -70,7 +70,7 @@ export function PageShell({
   children: React.ReactNode;
 }) {
   return (
-    <main className="flex-1 bg-brand-mint">
+    <main className="flex-1">
       <div className={`mx-auto px-6 py-16 ${wide ? "max-w-5xl" : "max-w-3xl"}`}>
         {back && (
           <Link
@@ -85,7 +85,7 @@ export function PageShell({
         )}
         <div className="mb-8 text-center">
           <h1 className="text-4xl font-bold text-brand-green">{title}</h1>
-          <div className="mx-auto mt-4 h-1 w-16 rounded bg-brand-orange" />
+          <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-brand-orange" />
           {subtitle && <p className="mt-4 text-neutral-700">{subtitle}</p>}
         </div>
         {children}

@@ -134,7 +134,7 @@ function Tick() {
 
 export default function PartnershipSection() {
   return (
-    <section id="partnership" className="scroll-mt-16 bg-white relative overflow-hidden">
+    <section id="partnership" className="scroll-mt-16 relative overflow-hidden">
       <WheatDecor items={[{ side:"left", top:"42%", size:130, rotate:-15 }, { side:"right", top:"66%", size:90, rotate:30 }]} />
       <div className="relative mx-auto max-w-[1920px] px-6 pb-24 lg:px-20">
         <SectionHeading eyebrow="Become a partner" title="Partnership Opportunities" />
@@ -142,12 +142,12 @@ export default function PartnershipSection() {
           {tiers.map((t, i) => (
             <article
               key={t.name}
-              className="group flex flex-col rounded-2xl bg-brand-mint p-3 text-neutral-900 transition hover:-translate-y-1 hover:shadow-lg"
+              className="group flex flex-col glass rounded-3xl p-3 text-neutral-900 transition hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="flex flex-1 flex-col px-4 pb-4 pt-4">
                 <div className="flex gap-2 text-xs font-semibold">
-                  <span className="rounded-full bg-white px-3 py-1 text-brand-green">0{i + 1}</span>
-                  {t.spots && <span className="rounded-full bg-white px-3 py-1 text-brand-green">{t.spots}</span>}
+                  <span className="glass-pill rounded-full px-3 py-1 text-brand-green">0{i + 1}</span>
+                  {t.spots && <span className="glass-pill rounded-full px-3 py-1 text-brand-green">{t.spots}</span>}
                 </div>
 
                 <h3 className="mt-6 text-3xl font-bold leading-tight">{t.name}</h3>
@@ -163,10 +163,10 @@ export default function PartnershipSection() {
 
                 <a
                   href="#contact"
-                  className="mt-8 inline-flex items-center gap-3 self-start rounded-full bg-brand-orange py-1.5 pl-6 pr-1.5 text-sm font-semibold text-white transition hover:brightness-110"
+                  className="mt-8 btn-glass inline-flex items-center gap-3 self-start rounded-full py-1.5 pl-6 pr-1.5 text-sm font-semibold text-white transition hover:brightness-110"
                 >
                   Enquire
-                  <span className="grid h-8 w-8 place-items-center rounded-full bg-white text-brand-orange">
+                  <span className="grid h-8 w-8 place-items-center rounded-full bg-white/80 text-brand-orange">
                     <Arrow />
                   </span>
                 </a>

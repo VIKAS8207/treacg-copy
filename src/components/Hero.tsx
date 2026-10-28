@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Pill({ icon, children }: { icon: "calendar" | "pin"; children: React.ReactNode }) {
   return (
-    <span className="flex items-center gap-3 rounded-md border border-white/30 bg-slate-900/50 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm sm:text-base">
+    <span className="flex items-center gap-3 rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm sm:text-base">
       <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden>
         {icon === "calendar" ? (
           <path d="M7 3v3m10-3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z" strokeLinecap="round" />
@@ -39,7 +39,7 @@ export default function Hero() {
         </div>
         <Link
           href="#"
-          className="mt-4 rounded-sm bg-brand-orange px-8 py-3 text-lg font-semibold transition hover:brightness-110"
+          className="mt-4 btn-glass rounded-full px-8 py-3 text-lg font-semibold transition hover:brightness-110"
         >
           Register Now
         </Link>

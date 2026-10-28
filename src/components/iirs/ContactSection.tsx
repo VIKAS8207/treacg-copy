@@ -55,10 +55,10 @@ export default function ContactSection({
   form?: EnquiryFormProps;
 }) {
   return (
-    <section id="contact" className="scroll-mt-16 bg-white relative overflow-hidden">
+    <section id="contact" className="scroll-mt-16 relative overflow-hidden">
       <WheatDecor items={[{ side:"left", top:"28%", size:100, rotate:20 }, { side:"right", top:"72%", size:120, rotate:-25 }]} />
       <div className="relative mx-auto max-w-6xl px-6 py-24">
-        <div className="relative rounded-2xl bg-orange-100/70 p-6 sm:p-10">
+        <div className="relative glass-warm rounded-3xl p-6 sm:p-10">
           <div className="absolute -right-3 -top-8 sm:-right-6 sm:-top-10">
             <ApprovalStamp />
           </div>
@@ -77,7 +77,7 @@ export default function ContactSection({
             </div>
 
             {/* right: form panel */}
-            <div className="rounded-xl bg-white p-6 shadow-sm sm:p-8">
+            <div className="glass-strong rounded-2xl p-6 sm:p-8">
               <EnquiryForm {...form} />
             </div>
           </div>

@@ -36,12 +36,12 @@ function Track({ items, className }: { items: string[]; className: string }) {
 
 export default function MarqueeTapes() {
   return (
-    <div className="relative h-44 overflow-hidden bg-white sm:h-56" aria-label="Conference, Exhibition, International Buyer–Seller Meetings, Industry Networking, Food Street">
+    <div className="relative h-44 overflow-hidden sm:h-56" aria-label="Conference, Exhibition, International Buyer–Seller Meetings, Industry Networking, Food Street">
       {/* both tapes sit slightly wider than the viewport so the rotated ends never show */}
-      <div className="absolute -left-[5%] top-1/2 w-[110%] -translate-y-1/2 -rotate-3 bg-brand-green py-4 text-white shadow-lg">
+      <div className="absolute -left-[5%] top-1/2 w-[110%] -translate-y-1/2 -rotate-3 bg-brand-green/70 backdrop-blur-md py-4 text-white shadow-lg">
         <Track items={bottomTape} className="animate-tape-right" />
       </div>
-      <div className="absolute -left-[5%] top-1/2 w-[110%] -translate-y-1/2 rotate-3 bg-brand-orange py-4 text-white shadow-lg">
+      <div className="absolute -left-[5%] top-1/2 w-[110%] -translate-y-1/2 rotate-3 bg-brand-orange/70 backdrop-blur-md py-4 text-white shadow-lg">
         <Track items={topTape} className="animate-tape-left" />
       </div>
     </div>

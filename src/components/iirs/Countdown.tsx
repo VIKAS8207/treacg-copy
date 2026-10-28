@@ -33,7 +33,7 @@ export default function Countdown() {
   return (
     <div className="grid grid-cols-4 gap-2 sm:gap-3" role="timer" aria-label="Time left until IIRS 2027">
       {units.map((u) => (
-        <div key={u.label} className="rounded-lg bg-white/10 px-2 py-3 sm:px-4 sm:py-4">
+        <div key={u.label} className="rounded-2xl bg-white/10 px-2 py-3 sm:px-4 sm:py-4">
           <p className="text-3xl font-bold tabular-nums sm:text-5xl">{u.value}</p>
           <p className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-white/70 sm:text-xs">{u.label}</p>
         </div>

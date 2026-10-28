@@ -59,12 +59,16 @@ export type EnquiryFormProps = {
   choices?: string[];
   /** pre-selected choice */
   selected?: string;
+  submitLabel?: string;
+  successTitle?: string;
 };
 
 export default function EnquiryForm({
   choiceLabel = "Partnership type",
   choices = partnershipTypes,
   selected = "",
+  submitLabel = "Send Enquiry",
+  successTitle = "Thank you for your enquiry",
 }: EnquiryFormProps) {
   const [errors, setErrors] = useState<Errors>({});
   const [done, setDone] = useState(false);
@@ -72,12 +76,12 @@ export default function EnquiryForm({
   if (done) {
     return (
       <div className="py-16 text-center">
-        <div className="mx-auto mb-5 grid h-16 w-16 place-items-center rounded-full bg-brand-mint text-brand-green">
+        <div className="mx-auto mb-5 grid h-16 w-16 place-items-center rounded-full bg-white/60 text-brand-green">
           <svg viewBox="0 0 20 20" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
             <path d="m4 10.5 4 4 8-9" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
-        <p className="text-2xl font-bold text-brand-green">Thank you for your enquiry</p>
+        <p className="text-2xl font-bold text-brand-green">{successTitle}</p>
         <p className="mt-2 text-neutral-600">The TREACG team will get back to you shortly.</p>
       </div>
     );
@@ -125,7 +129,7 @@ export default function EnquiryForm({
           {choices.map((t) => (
             <label key={t} className="cursor-pointer">
               <input type="radio" name="type" value={t} defaultChecked={t === selected} className="peer sr-only" />
-              <span className="block rounded-md border border-neutral-400 px-3 py-1.5 text-xs text-neutral-700 transition hover:border-brand-green peer-checked:border-brand-green peer-checked:bg-brand-green peer-checked:text-white peer-focus-visible:ring-2 peer-focus-visible:ring-brand-orange">
+              <span className="block rounded-full border border-neutral-400/60 bg-white/40 backdrop-blur px-3 py-1.5 text-xs text-neutral-700 transition hover:border-brand-green peer-checked:border-brand-green peer-checked:bg-brand-green peer-checked:text-white peer-focus-visible:ring-2 peer-focus-visible:ring-brand-orange">
                 {t}
               </span>
             </label>
@@ -145,9 +149,9 @@ export default function EnquiryForm({
       <div className="sm:col-span-2">
         <button
           type="submit"
-          className="inline-flex items-center gap-3 rounded-md bg-brand-orange px-5 py-3 text-sm font-semibold text-white transition hover:brightness-110"
+          className="inline-flex items-center gap-3 btn-glass rounded-full px-5 py-3 text-sm font-semibold text-white transition hover:brightness-110"
         >
-          Send Enquiry
+          {submitLabel}
           <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
             <path d="M6 14 14 6M7 6h7v7" strokeLinecap="round" strokeLinejoin="round" />
           </svg>

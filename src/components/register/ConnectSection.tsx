@@ -20,7 +20,7 @@ function Arrow() {
 
 export default function ConnectSection() {
   return (
-    <section className="bg-white relative overflow-hidden">
+    <section className="relative overflow-hidden">
       <WheatDecor items={[{ side:"left", top:"68%", size:110, rotate:-20 }, { side:"right", top:"30%", size:90, rotate:20 }]} />
       <div className="relative mx-auto grid max-w-[1920px] gap-12 px-6 py-24 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:px-20">
         {/* intro */}
@@ -29,7 +29,7 @@ export default function ConnectSection() {
           <h2 className="mt-3 text-4xl font-bold leading-tight text-brand-green sm:text-5xl">
             Make new connections across the world
           </h2>
-          <div className="mt-5 h-1 w-16 rounded bg-brand-orange" />
+          <div className="mt-5 h-1 w-16 rounded-full bg-brand-orange" />
           <p className="mt-6 text-lg leading-relaxed text-neutral-700">
             Exhibitors and delegates from over 30 countries meet in one place. Whether you export, mill, buy, supply
             technology or shape policy, IIRS 2027 is where trade opportunities turn into commercial partnerships and
@@ -37,10 +37,10 @@ export default function ConnectSection() {
           </p>
           <Link
             href="/register/form"
-            className="mt-8 inline-flex items-center gap-3 rounded-full bg-brand-orange py-2 pl-7 pr-2 font-semibold text-white transition hover:brightness-110"
+            className="mt-8 btn-glass inline-flex items-center gap-3 rounded-full py-2 pl-7 pr-2 font-semibold text-white transition hover:brightness-110"
           >
             Register Now
-            <span className="grid h-10 w-10 place-items-center rounded-full bg-white text-brand-orange">
+            <span className="grid h-10 w-10 place-items-center rounded-full bg-white/80 text-brand-orange">
               <Arrow />
             </span>
           </Link>
@@ -51,10 +51,10 @@ export default function ConnectSection() {
           {benefits.map(([title, text], i) => (
             <article
               key={title}
-              className="group flex flex-col rounded-2xl bg-brand-mint p-7 transition hover:-translate-y-1 hover:shadow-lg"
+              className="group flex flex-col glass rounded-3xl p-7 transition hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="flex items-center justify-between">
-                <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-brand-green">0{i + 1}</span>
+                <span className="glass-pill rounded-full px-3 py-1 text-xs font-bold text-brand-green">0{i + 1}</span>
                 <span className="grid h-9 w-9 place-items-center rounded-full bg-neutral-900 text-white transition group-hover:rotate-45">
                   <Arrow />
                 </span>

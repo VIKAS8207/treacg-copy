@@ -10,7 +10,7 @@ export default function TicketsPage() {
   return (
     <>
       <Header />
-      <main className="flex-1 bg-white">
+      <main className="flex-1">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <div className="mb-12 text-center">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-green">Your pass to IIRS 2027</p>
